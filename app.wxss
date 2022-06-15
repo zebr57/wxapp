@@ -1,0 +1,15 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page {
+  /* 定制警告按钮的背景颜色和边框颜色 */
+  --button-primary-background-color: blue;
+  --button-primary-border-color: blue;
+}

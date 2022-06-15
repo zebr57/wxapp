@@ -1,0 +1,16 @@
+<!--components/test-comp/test-comp.wxml-->
+<text>components/test-comp/test-comp.wxml</text>
+<view></view>
+<!-- <slot></slot> -->
+<view>当前值：{{num}}</view>
+<view>最大值：{{max}}</view>
+<view class="btn" bindtap="add">自增</view>
+<view>验证组件中的data和prop属性管关系</view>
+<view bindtap="verify">验证</view>
+<!-- <view>
+  <slot name='one'></slot>
+  <slot name='two'></slot>
+</view> -->
+<!-- 验证behavior -->
+<view>{{userName}}</view>
+
