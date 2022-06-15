@@ -1,5 +1,10 @@
 <!--components/test-comp/test-comp.wxml-->
 <text>components/test-comp/test-comp.wxml</text>
+<view>姓名：{{name}}</view>
+<view>年龄：{{age}}</view>
+<view>{{getNum}}</view>
+<van-button type='primary' bindtap="handleEdit" data-step="黎明花">修改store姓名</van-button>
+<van-button type='primary' bindtap="handleEdit" data-step='{{1}}'>修改store年龄</van-button>
 <view></view>
 <!-- <slot></slot> -->
 <view>当前值：{{num}}</view>

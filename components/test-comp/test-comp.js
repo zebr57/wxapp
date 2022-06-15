@@ -1,10 +1,25 @@
 // components/test-comp/test-comp.js
 const myBehavior = require('../../behavior/my-behavior.js')
+
+import { storeBindingsBehavior } from 'mobx-miniprogram-bindings'
+import { store } from '../../store/store'
+
 Component({
   options: {
     multipleSlots: true
   },
-  behaviors: [myBehavior],
+  behaviors: [myBehavior, storeBindingsBehavior],
+  storeBindings: {
+    store,
+    field: {
+      name: () => store.name,
+      age: (store) => store.age,
+      num: 'getNum'
+    },
+    actions: {
+      setName: 'setName'
+    }
+  },
   /**
    * 组件的属性列表
    */
@@ -70,6 +85,14 @@ Component({
       console.log(this.data)
       console.log(this.properties)
       console.log(this.data === this.properties)
-    }
+    },
+    handleEdit(e) {
+      console.log(e)
+      if (e.target.dataset.step==1) {
+        this.setAge(e.target.dataset.step)
+      } else {
+        this.setName(e.target.dataset.step)
+      }
+    },
   }
 })

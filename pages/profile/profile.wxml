@@ -1,0 +1,10 @@
+<!--pages/profile/profile.wxml-->
+<text>pages/profile/profile.wxml</text>
+<view></view>
+<van-button type='primary' bindtap="getUserInfo">调用接口</van-button>
+<view>姓名：{{name}}</view>
+<view>年龄：{{age}}</view>
+<view>{{getNum}}</view>
+<van-button type='primary' bindtap="handleEdit" data-step="黎明花">修改store姓名</van-button>
+<van-button type='primary' bindtap="handleEdit" data-step='{{1}}'>修改store年龄</van-button>
+

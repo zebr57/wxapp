@@ -26,5 +26,4 @@
   </test-comp>
   <view>页面的max:{{max}}</view>
   <view bindtap="editMax">修改最大值</view>
-  <van-button type='primary'>vant</van-button>
 </view>
